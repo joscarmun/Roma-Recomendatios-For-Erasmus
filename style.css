@@ -186,6 +186,22 @@ footer {
 .card-link:hover {
   transform: translateY(-3px);
 }
+.map-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #fff;
+  background-color: #7a2e2e;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.map-link:hover {
+  background-color: #a74343;
+}
 
   
 }
