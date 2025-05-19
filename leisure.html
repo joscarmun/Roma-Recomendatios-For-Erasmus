@@ -1,10 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leisure - Erasmus in Rome</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card .content {
+      padding: 15px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #e63946;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: #333;
+    }
+
+    .card a {
+      color: #7b2cbf;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      margin-top: 40px;
+    }
+
+   .clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.club-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.club-card:hover {
+  transform: translateY(-5px);
+}
+
+.club-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.club-content {
+  padding: 15px;
+}
+
+.club-content h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1d3557;
+}
+
+.club-content p {
+  margin: 10px 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.club-content a {
+  color: #e63946;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.club-content a:hover {
+  text-decoration: underline;
+}
+
+
+</style>
 </head>
 <body>
   <header>
@@ -24,98 +133,144 @@
     </div>
   </header>
 
- <main class="container">
-  <section>
-    <h2>Where to Eat</h2>
-    <p>Explore some of the best places to eat well without breaking the bank.</p>
+  <main class="container">
+    <section>
+      <h2>Where to Eat</h2>
+      <p>Explore some of the best places to eat well without breaking the bank.</p>
 
-    <article>
-      <h3>Osteria Sonnino</h3>
-      <img src="img/osteria.jpg" alt="Osteria Sonnino" class="center-img">
-      <p>A great, affordable spot to try some of the most traditional Roman dishes, right in the heart of Trastevere. Cozy vibe, friendly staff, and they even speak English and Spanish.<br>
-      <a href="https://maps.app.goo.gl/wDYwnB3Mk4nPBJ7n8" target="_blank">📍 Google Maps</a></p>
-    </article>
+      <div class="cards-grid">
 
-    <article>
-      <h3>Trattoria Luzzi</h3>
-      <img src="img/luzzi.jpg" alt="Trattoria Luzzi" class="center-img">
-      <p>Roman classic near the Colosseum. Homemade pasta, great value, cozy atmosphere and fast service.<br>
-      <a href="https://maps.app.goo.gl/NczNUH7mehdyibgC9" target="_blank">📍 Google Maps</a></p>
-    </article>
+        <div class="card">
+          <img src="osteria.jpg" alt="Osteria Sonnino" />
+          <div class="content">
+            <h3>Osteria Sonnino</h3>
+            <p>A great, affordable spot to try some of the most traditional Roman dishes, right in the heart of Trastevere. Cozy vibe, friendly staff, and they even speak English and Spanish.</p>
+            <p><a href="https://maps.app.goo.gl/wDYwnB3Mk4nPBJ7n8" target="_blank">📍 Google Maps</a></p>
+          </div>
+        </div>
 
-    <article>
-      <h3>Limerick</h3>
-      <img src="img/limerick.jpg" alt="Limerick Burger Spot" class="center-img">
-      <p>Had enough pasta? Get a juicy burger for a change, great price, great taste.<br>
-      <a href="https://maps.app.goo.gl/LmCcCmLTTxnEFW5U7" target="_blank">📍 Google Maps</a></p>
-    </article>
+        <div class="card">
+          <img src="luzzi.jpg" alt="Trattoria Luzzi" />
+          <div class="content">
+            <h3>Trattoria Luzzi</h3>
+            <p>Roman classic near the Colosseum. Homemade pasta, great value, cozy atmosphere and fast service.</p>
+            <p><a href="https://maps.app.goo.gl/NczNUH7mehdyibgC9" target="_blank">📍 Google Maps</a></p>
+          </div>
+        </div>
 
-    <article>
-      <h3>Gelateria Lubrano</h3>
-      <img src="img/gelato.jpg" alt="Gelateria Lubrano" class="center-img" width="300">
-      <p>One of the most popular artisan gelato shops in Rome. Great flavors, big portions, and affordable prices.<br>
-      <a href="https://maps.app.goo.gl/B9rLgRNP4TYjgcMUA" target="_blank">📍 Google Maps</a></p>
-    </article>
-   <article>
-     <h3>Al Forno della Soffitta</h3>
-     <img src="alforno.jpg" alt="Al forno della Soffitta" class="center-img" width="300">
+        <div class="card">
+          <img src="limerick.jpg" alt="Limerick Burger Spot" />
+          <div class="content">
+            <h3>Limerick</h3>
+            <p>Had enough pasta? Get a juicy burger for a change, great price, great taste.</p>
+            <p><a href="https://maps.app.goo.gl/LmCcCmLTTxnEFW5U7" target="_blank">📍 Google Maps</a></p>
+          </div>
+        </div>
 
-     <p>Authentic Neapolitan-style pizza with high-quality ingredients. Cozy place with great atmosphere.</p>
-     <a href="https://maps.app.goo.gl/avNF4U2SDE9kAZ557" target="_blank">📍 Google Maps</a></p>
-   </article>
+        <div class="card">
+          <img src="gelato.jpg" alt="Gelateria Lubrano" />
+          <div class="content">
+            <h3>Gelateria Lubrano</h3>
+            <p>One of the most popular artisan gelato shops in Rome. Great flavors, big portions, and affordable prices.</p>
+            <p><a href="https://maps.app.goo.gl/B9rLgRNP4TYjgcMUA" target="_blank">📍 Google Maps</a></p>
+          </div>
+        </div>
 
-  <article>
-    <h3>Ar Grottino der Traslocatore</h3>
-   <img src="grottino.jpg" alt="Ar Grottino der Traslocatore" class="center-img" width="300">
-   <p>Small trattoria in the charming Garbatella neighborhood. Large trays of homemade pasta at a very low price.</p>
-   <a href="https://maps.app.goo.gl/zeVZtgwJc2WXtKSM6" target="_blank">📍 Google Maps</a></p>
+        <div class="card">
+          <img src="alforno.jpg" alt="Al Forno della Soffitta" />
+          <div class="content">
+            <h3>Al Forno della Soffitta</h3>
+            <p>Authentic Neapolitan-style pizza with high-quality ingredients. Cozy place with great atmosphere.</p>
+            <p><a href="https://maps.app.goo.gl/avNF4U2SDE9kAZ557" target="_blank">📍 Google Maps</a></p>
+          </div>
+        </div>
 
- </article>
- <article>
-  <h3>Maccheroni</h3>
-  <img src="macheroni roma.jpg" alt="Maccheroni Restaurant" class="center-img" width="300">
-  <p>Close to Piazza Navona. Excellent pasta dishes, generous portions, very popular spot.</p>
-  <a href="https://maps.app.goo.gl/NWckwAtdhZAVvdxu7" target="_blank">📍 Google Maps</a></p>
+        <div class="card">
+          <img src="grottino.jpg" alt="Ar Grottino der Traslocatore" />
+          <div class="content">
+            <h3>Ar Grottino der Traslocatore</h3>
+            <p>Small trattoria in the charming Garbatella neighborhood. Large trays of homemade pasta at a very low price.</p>
+            <p><a href="https://maps.app.goo.gl/zeVZtgwJc2WXtKSM6" target="_blank">📍 Google Maps</a></p>
+          </div>
+        </div>
 
-</article>
+        <div class="card">
+          <img src="macheroni roma.jpg" alt="Maccheroni Restaurant" />
+          <div class="content">
+            <h3>Maccheroni</h3>
+            <p>Close to Piazza Navona. Excellent pasta dishes, generous portions, very popular spot.</p>
+            <p><a href="https://maps.app.goo.gl/NWckwAtdhZAVvdxu7" target="_blank">📍 Google Maps</a></p>
+          </div>
+        </div>
 
-  </section>
+      </div>
+    </section>
 
-  <section>
-    <h2>Where to Go Out</h2>
+    <section class="section-title">
+      <h2>Where to Go Out</h2>
 
-    <h3>Erasmus Associations</h3>
-    <p>
-  <strong>– ERA</strong><br>
-  <strong>– ESN (discount on Ryanair flights)</strong><br>
-  <strong>– OASIS</strong>
-</p>
-    <p>Their cards offer discounts for trips, parties, and sports activities – and more importantly, they’re a fantastic way to meet people.
+      <h3>Erasmus Associations</h3>
+      <p>
+        <strong>– ERA</strong><br />
+        <strong>– ESN (discount on Ryanair flights)</strong><br />
+        <strong>– OASIS</strong>
+      </p>
 
-Rome is a big city, full of Erasmus students from all over the world, so there’s always a vibrant atmosphere and no shortage of people to connect with. It's easy to build a group of friends that will last not only the year – but maybe a lifetime.
+      <p>
+        Their cards offer discounts for trips, parties, and sports activities – and more importantly, they’re a fantastic way to meet people.
+        <br /><br />
+        Rome is a big city, full of Erasmus students from all over the world, so there’s always a vibrant atmosphere and no shortage of people to connect with. It's easy to build a group of friends that will last not only the year – but maybe a lifetime.
+        <br /><br />
+        Every single day, there's something going on: events, outings, parties, meetups... even on weekdays, you'll find places to go and things to do. Life in Rome as an Erasmus student is anything but boring.
+      </p>
 
-Every single day, there's something going on: events, outings, parties, meetups... even on weekdays, you'll find places to go and things to do. Life in Rome as an Erasmus student is anything but boring.</p>
+      <h3>Bars</h3>
+      <img src="san calisto.jpg" alt="Bar San Calisto in Trastevere" style="width: 300px; display: block; margin-bottom: 20px;" />
+      <p><strong>Blue Bar (San Lorenzo):</strong> Cheap, outdoors, always full of Erasmus students.</p>
+      <p><strong>Bar San Calisto (Trastevere):</strong> Very cheap, local vibe, always full of people. Classic meeting point.</p>
+      <p><strong>Caffè Perù (Centro):</strong> Relaxed atmosphere, good for a drink or aperitivo near Campo de' Fiori.</p>
+      <p><strong>Caffè Tevere (Centro):</strong> Cosy and casual. On Thursdays they offer discounts on Spritz and beers — popular with students.</p>
 
-  <h3>Bars</h3>
-   <img src="san calisto.jpg" alt="Bar San Calisto in Trastevere" class="center-img" style="width:300">
+      <h3>Clubs</h3>
+<div class="clubs-grid">
+  <div class="club-card">
+    <img src="qube.jpg" alt="QUBE Club" />
+    <div class="club-content">
+      <h4>QUBE</h4>
+      <p>Legendary 3-floor techno club in Rome. LGBTQ+ friendly and very Erasmus-popular on Fridays.</p>
+      <a href="https://maps.app.goo.gl/F7UhXaTJx6wKGCiZA" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
 
-<p><strong>Blue Bar (San Lorenzo):</strong> Cheap, outdoors, always full of Erasmus students.</p>
-<p><strong>Bar San Calisto (Trastevere):</strong> Very cheap, local vibe, always full of people. Classic meeting point.</p>
-<p><strong>Caffè Perù (Centro):</strong> Relaxed atmosphere, good for a drink or aperitivo near Campo de' Fiori.</p>
-<p><strong>Caffè Tevere (Centro):</strong> Cosy and casual. On Thursdays they offer discounts on Spritz and beers — popular with students.</p>
-    
+  <div class="club-card">
+    <img src="cafelat.jpg" alt="Caffe Latino" />
+    <div class="club-content">
+      <h4>Caffe Latino</h4>
+      <p>Latin music, reggaeton, and Erasmus parties every week. Central location and fun vibes guaranteed.</p>
+      <a href="https://maps.app.goo.gl/cPqTtoTZfBPMoH91A" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
 
+  <div class="club-card">
+    <img src="sinners.jpg" alt="Sinner Club" />
+    <div class="club-content">
+      <h4>Sinner Club</h4>
+      <p>Modern club with themed nights and Erasmus discounts. Great place for a mid-week party.</p>
+      <a href="https://maps.app.goo.gl/9KJG4s4VSHgscYvE7" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
 
-    <h3>Clubs</h3>
-    <ul>
-      <li><a href="https://maps.app.goo.gl/F7UhXaTJx6wKGCiZA" target="_blank">QUBE</a></li>
-      <li><a href="https://maps.app.goo.gl/cPqTtoTZfBPMoH91A" target="_blank">Caffe Latino</a></li>
-      <li><a href="https://maps.app.goo.gl/9KJG4s4VSHgscYvE7" target="_blank">Sinner Club</a></li>
-      <li><a href="https://maps.app.goo.gl/xc9PcuFoQmkEy2NJ8" target="_blank">Piper Club</a></li>
-    </ul>
-  </section>
-</main>
+  <div class="club-card">
+    <img src="piper.jpg" alt="Piper Club" />
+    <div class="club-content">
+      <h4>Piper Club</h4>
+      <p>Historic Roman club with big events and commercial music. Often hosts famous DJs and live acts.</p>
+      <a href="https://maps.app.goo.gl/xc9PcuFoQmkEy2NJ8" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
+</div>
 
+  </main>
 
   <footer>
     <div class="container">
