@@ -78,5 +78,86 @@
       </ul>
       
     </section>
+    <section class="erasmus-quiz">
+  <h3>Test Your Rome Knowledge Before Your Arrival</h3>
+  <form id="erasmus-quiz-form">
+    <div class="question">
+      <p>1. What kind of discounts can Erasmus students often get in Rome?</p>
+      <label><input type="radio" name="q1" value="a"> A) Free public transport in the city</label><br>
+      <label><input type="radio" name="q1" value="b"> B) Free meals in university cafeterias</label><br>
+      <label><input type="radio" name="q1" value="c"> C) Reduced or free entry to museums and monuments</label>
+    </div>
+
+    <div class="question">
+      <p>2. Which of these monuments is part of Imperial Rome?</p>
+      <label><input type="radio" name="q2" value="a"> A) Santa Maria Maggiore</label><br>
+      <label><input type="radio" name="q2" value="b"> B) Castel Sant’Angelo</label><br>
+      <label><input type="radio" name="q2" value="c"> C) Galleria Borghese</label>
+    </div>
+
+    <div class="question">
+      <p>3. Where can you find Caravaggio’s paintings about the life of Saint Matthew?</p>
+      <label><input type="radio" name="q3" value="a"> A) San Luigi dei Francesi</label><br>
+      <label><input type="radio" name="q3" value="b"> B) San Giovanni in Laterano</label><br>
+      <label><input type="radio" name="q3" value="c"> C) Villa Farnesina</label>
+    </div>
+
+    <div class="question">
+      <p>4. What famous artwork can you find inside the Cappella Sistina in the Vatican Museums?</p>
+      <label><input type="radio" name="q4" value="a"> A) Bernini’s Ecstasy of Saint Teresa</label><br>
+      <label><input type="radio" name="q4" value="b"> B) Michelangelo’s ceiling and Last Judgment</label><br>
+      <label><input type="radio" name="q4" value="c"> C) Raphael’s Triumph of Galatea</label>
+    </div>
+
+    <button type="submit">Check Answers</button>
+  </form>
+
+  <div id="quiz-results" style="margin-top: 20px; font-weight: bold;"></div>
+</section>
+
   </main>
-  
+  <script>
+  document.getElementById("erasmus-quiz-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const answers = {
+      q1: "c",
+      q2: "b",
+      q3: "a",
+      q4: "b"
+    };
+
+    let score = 0;
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (selected && selected.value === answers[q]) {
+        score++;
+      }
+    }
+
+    const resultBox = document.getElementById("quiz-results");
+
+    let message = "";
+    if (score === 4) {
+      message = "🎉 Perfect! You're an Erasmus Rome Master!";
+      resultBox.style.color = "green";
+    } else if (score >= 2) {
+      message = "👍 Not bad! You know a bit about Rome.";
+      resultBox.style.color = "#f39c12";
+    } else {
+      message = "📚 Keep learning! Rome has so much to offer.";
+      resultBox.style.color = "red";
+    }
+
+    resultBox.innerHTML = `You got <strong>${score} out of 4 correct</strong>.<br>${message}`;
+  });
+</script>
+
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Erasmus in Rome. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
