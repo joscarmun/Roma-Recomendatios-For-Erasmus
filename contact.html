@@ -29,25 +29,30 @@
       <h2>Got a tip or a question?</h2>
       <p>If you want to share something helpful or just ask us anything, drop it below:</p>
 
-      <form action="#" method="post">
-  <div class="form-row">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
-  </div>
+      <form action="https://formsubmit.co/joseluis20903@gmail.com" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-  <div class="form-row">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-  </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
 
-  <div class="form-row">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-  </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
 
-  <button type="submit" class="btn-submit">Send Message</button>
-</form>
+        <!-- Opcional: evita captcha -->
+        <input type="hidden" name="_captcha" value="false">
 
+        <!-- Opcional: redirección después del envío -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
     </section>
   </main>
 
